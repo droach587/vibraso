@@ -1,0 +1,45 @@
+//  ==========================================================================
+//  Form Elements
+//  ==========================================================================
+
+	input{
+		&:focus{
+			outline: none;
+			-moz-outline: none;
+		}
+	}
+	
+	button{
+		-moz-outline: none !important;
+		outline:none !important;
+	}
+	
+	.site__search{
+		font-size: 15px;
+		padding: 0px; 
+		margin: 3.0% 0 0 10px;
+		@extend .float-left;
+		button{
+			margin: 0px;
+			background: $brand-yellow;
+			border: none;
+			padding: 10px 12px 7px 11px;
+			&:hover{
+				background: $nav-alt-grey;
+			}
+		}
+		input{
+			margin-right:0px;
+			padding: 11px 6px 7px 6px;
+			margin-right: -4px;
+			width: 140px;
+			background: #8c8d8e;
+			border: none;
+			text-transform: uppercase;
+			@include input-placeholder {
+			    color: white;
+			    opacity: .7;
+			    font-size: 12px;
+			}
+		}
+	}

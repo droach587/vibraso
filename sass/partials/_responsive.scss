@@ -1,0 +1,401 @@
+//  ==========================================================================
+//  BP ONE
+//  ==========================================================================
+
+	@media screen and (max-width: 1600px){
+		.site__navigation--primary-navigation ul{ text-align: left; }
+		.site__navigation--primary-navigation li.logo{ margin-left: .7%; }
+		.site__navigation--header-social{
+			margin-left: 0px;
+			left: inherit;
+			right: .7%;
+		}
+		.site_navigation--row{
+			text-align: center;
+			@include reset-center-container();
+		}
+		
+		.block-img-bg{ display: none; visibility: hidden; }
+	}
+
+//  ==========================================================================
+//  BP Two
+//  ==========================================================================
+
+	@media screen and (max-width: 1100px){
+		.site__navigation--primary-navigation li.logo{ margin-right: 0; }
+		.site__navigation--primary-navigation a{ padding: 25px 10px; font-size: 15px; }
+		.site_navigation--product-title{ font-size: 14px; }
+		.site__navigation--header-social i.symbol{ font-size: 25px; }
+		.category__production--upfront-mdle li{
+			@include nav-columns(3);
+			float: left;
+		}
+		.upfront__heading{
+			font-size: 30px;
+			line-height: 32px;
+			margin: 10px 0;
+			br{ display: none; }
+		}
+		.category__production--upfront-mdle ul{ padding: 0 0 20px 0; }
+		.products--row{
+			width: 98%;
+			padding: 10px;
+			margin-left: -#{(98/2)+'%'};
+		}
+		.product__row-heading{
+			font-size: 28px;
+			line-height: 28px;
+		}
+		.products--row .default-cta{
+			float: left;
+			width: 100%;
+			bottom: inherit;
+			top: 5px;
+			position: relative;
+			margin-left: 20px;
+			@include box-sizing(border-box);
+			text-align: center;
+		}
+		.pdp--product-description{
+			padding: 20px .8%;
+		}
+		.pdp--product-description .default-cta{
+			display: inline-block;
+			position: relative;
+			left: inherit;
+			bottom: inherit;
+			margin-left: 0px;
+		}
+		.products--row li{ float: left; @include nav-columns(2); }
+		.products--subcategories{
+			li{
+				float: left;
+				position: relative;
+				@include nav-columns(4);
+			}
+		}
+		
+		.block-container, 
+		.block-container.right-col,
+		.block-container.left-col{
+			width: 100%;
+			float: inherit;
+		}
+		
+		.block__primary-heading{
+			font-size: 40px;
+			line-height: 42px;
+			.float-left, .float-right{ display: inline-block; float: none; }
+		}
+		
+		.hp--heritage{
+			background-position: 10% 0px;
+			.block__primary-heading{ width: 100%; }
+		}
+		
+		.hp--social a{
+			font-size: 16px;
+			i{ font-size: 30px; }
+		}
+		
+		.hp--events, .hp--partners{ min-height: 500px; }	
+		.hp--events{ background-position: 10% 0; }
+		.hp--partners{ background-position: 73% 0; }
+		
+		
+		.partners-container{
+			.span_2, .span_3{
+				width: 33.333%;
+			}
+		}
+		.category__partners-row li a{
+			padding: 20px 40px !important;
+		}
+	}
+
+
+//  ==========================================================================
+//  BP Three
+//  ==========================================================================
+
+	@media screen and (max-width: 959px){
+		.site__footer--secondary-nav .col{
+			width: #{(100/4)+'%'};
+			&.site__footer--follow{
+				width: 100%;
+				text-align: center;
+				li:first-child{ width: 100%; text-align: center; }
+				li{ float: none; display: inline-block; }
+			}
+		}
+		.site__footer--secondary-nav .col:nth-child(5),
+		.site__footer--secondary-nav .col:nth-child(9){
+			clear: left;
+		}
+		
+		.homepage__carousel-container{ background: black; margin: 0 0 -4px;}
+		.homepage__carousel .default-cta,
+		.block-container .default-cta{
+			font-size: 14px;
+			min-width: 250px;
+			@include box-sizing(border-box);
+		}
+		.block-container .default-cta{ margin: 5px 0; }
+		.carousel__cta-container,
+		.carousel__cta-container.right-align{
+			left: 0px;
+			right: initial;
+			width: 100%;
+			top: 0px;
+			@include box-sizing(border-box);
+			@include transform(translateY(0));
+		}
+		.flex-control-nav{ bottom: 5px; }
+		.carousel-slide{
+			float: left;
+			position: relative;
+			display: block;
+			width: 100%;
+			padding: 20px 20px 40px 20px;
+			background: black center center no-repeat;
+			@include box-sizing(border-box);
+			@include background-size(cover);
+			.carousel__cta-container{
+				margin: 10px 0;
+				padding: 0px;
+				float: left;
+				position: relative;
+				width: 100%;
+				@include box-sizing(border-box);
+				br{ display: none; }
+			}
+			.carousel__heading,
+			.carousel__cta-container.right-align .carousel__heading{
+				margin-top: 0;
+				font-size: 42px;
+				line-height: 42px;
+			}
+			.carousel__subheading{
+				font-size: 22px;
+				line-height: 24px;
+			}
+			.sole-image{
+				position:relative;
+				display: block;
+				margin: 0 auto 0 auto;
+				top: 0;
+				width: 80%;
+				@include transform(translateY(0));
+			}		
+		}
+		.carousel-slide-bg{ display: none; visibility: hidden; }
+		
+		.category-tag{
+			width: 50%;
+			color: black;
+			top: 10px;
+			left: 0px;
+			right: 0px;
+			margin: 0 auto 0 auto;
+			text-align: center;
+			font-size: 18px;
+			@include box-sizing(border-box);
+			&::after, span{ display: none; }
+			@include transform(rotate(0deg));
+		}
+		
+	}
+
+
+//  ==========================================================================
+//  BP Four
+//  ==========================================================================
+
+	@media screen and (max-width: 910px){
+		.site__navigation--primary-navigation li.logo,
+		.site__navigation--header-social ul{ display: none; visibility: hidden; }
+		.site__navigation--primary-navigation ul{ text-align: left; }
+		.site__navigation--primary-navigation li{
+			text-align: center;
+			> a { padding: 20px 2px; font-size: 13px;}
+			sup{ font-size: 8px;}
+			i{ display: none; visibility:  hidden;}
+			ul, div{ display: none !important; visibility: hidden !important; }
+		}
+		.site__navigation--primary-navigation{
+			width: 80%;
+			z-index: 991;
+			float: left;
+			position: relative;
+		}
+		.site__navigaton--global-options{
+			.row{ padding: 2% .8%; }
+		}
+		.site__navigation--breadcrumbs{ display: none; visibility: hidden; }
+		.site__navigation--store-controls{
+			margin: 2px 0 0 0;
+			z-index: 9999;
+			li{
+				float: left;
+				position: relative;
+				margin: 0;
+			}
+			a{ font-size: 10px; padding: 2px; }
+		}
+		.site__logo--micro{
+			float: left;
+			position: relative;
+			margin: 2px 0;
+			display: block;
+			visibility: visible;
+		}
+		
+		.site__search{
+			top: 0px;
+			right: 0px;
+			margin: 0px;
+			width: 100%;
+			height: 100%;
+			input{ display: none; visibility: hidden; text-align: center; padding: 15px; @include box-sizing(border-box); font-size: 18px; }
+			button{ height: 100%; right: 0px; position: absolute; padding: 20px 20px; }
+			input[type='submit']{position: absolute; top: 182%; left: 0px; width: 100%; background: $brand-yellow; color: black; font-family: $din-bold; text-transform: uppercase;}
+			&.active-search{
+				input{
+					visibility:visible;
+					display:block;
+					clear:both;
+					top:100%;
+					position:absolute;
+					width:100%;
+					z-index:99999;
+					left:0;
+				}
+				input[type="submit"]{
+					top: 187%;
+					visibility: visible;
+					display: block;
+				}
+			}
+		}
+		.site__navigation--header-social{
+			top: 0px;
+			right: 0px;
+			height: 100%;
+			width: 100%;
+			z-index: 99;
+		}
+		
+		.category__hero{
+			min-height: inherit;
+			padding: 40px 20;
+			@include box-sizing(border-box);
+		}
+		.category__hero-heading{
+			font-size: 50px;
+			line-height: 50px;
+			letter-spacing: -1px;
+			margin: 10px 0;
+		}
+		
+		.category__hero-desc{
+			font-size: 18px;
+			line-height: 22px;
+			margin: 10px 0;
+		}
+		
+		.category__breadcrumb-container{ display: none; visibility: hidden; }
+	}
+
+
+//  ==========================================================================
+//  BP Five
+//  ==========================================================================
+
+	@media screen and (max-width: 685px){
+		.site__footer--secondary-nav .col{ width: #{(100/2)+'%'}; }
+		.site__footer--secondary-nav .col:nth-child(3){ clear: left; }
+		.offers__footer input[type="text"]{ margin-top: 10px; }
+		.offers__footer--form-wrap{
+			display: block;
+		}
+		
+		.category__production--upfront-mdle li{
+			@include nav-columns(1);
+			float: left;
+			padding: 10px;
+			a{ width: 100%; }
+			.upfront__cta{ margin-top: 10px; }
+			.sole__image-container{ display: none; visibility: hidden; }
+		}
+		.product__row-heading{ font-size: 22px; line-height: 22px; }
+		.products--subcategories{
+			li{
+				float: left;
+				position: relative;
+				@include nav-columns(2);
+				a{
+					padding: 20px;
+					float:left;
+					position: relative;
+					width: 100%;
+					text-align: center;
+					@include box-sizing(border-box);
+				}
+			}
+		}
+		.products--row li{ float: left; @include nav-columns(1); }
+		
+		.partners-container{
+			.span_2, .span_3, .span_4{
+				width: 50%;
+			}
+		}
+	}
+
+//  ==========================================================================
+//  BP Six
+//  ==========================================================================
+
+	@media screen and (max-width: 600px){
+		.category__article.left-article,
+		.block.left-article,
+		.block.right-article,
+		.category__article.right-article{
+			border-left: none;
+			border-right: none;
+			border-bottom: 10px solid white;
+		}
+		
+		.block{ border-width: 10px; }
+	}
+
+
+//  ==========================================================================
+//  Bp Seven
+//  ==========================================================================
+
+	@media screen and (max-width: 400px){
+		.site__footer--secondary-nav{ background: white; }
+		.row{ padding: 0 1%; }
+		.site__footer--secondary-nav .col{
+			width: 100%;
+			clear: left;
+			li, a{ width: 100%; text-align: left; }
+			.toggle{ display: none; visibility: hidden; }
+			i{ display: inline-block; visibility: visible; float: right; }
+			.site__footer--ul-title{ border-bottom: 1px solid #bbb; }
+		}
+		.site__footer--secondary-nav ul li a{ font-size: 14px; }
+	}
+
+
+//  ==========================================================================
+//  Touch Response
+//  ==========================================================================
+
+	.touch{
+		.default-cta{
+			i{opacity: 1; margin: 0;}
+		}
+	}

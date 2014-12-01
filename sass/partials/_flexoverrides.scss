@@ -1,0 +1,43 @@
+//  ==========================================================================
+//  Flex Sider Thematic Overrides
+//  ==========================================================================
+
+	.flex-control-nav{
+		bottom: 20px;
+		z-index: 999;
+	}
+	.flex-control-paging li{
+		margin: 0px 4px;
+	}
+	.flex-control-paging li a{
+		background: rgba(white,.8);
+		width: 15px;
+		height: 15px;
+		&.flex-active{
+			background: rgba(black,.5);
+		}
+	}
+	
+	.flex-direction-nav{
+		z-index: 9999;
+	}
+	
+	.flex-direction-nav{
+		.flex-prev{
+			left: 20px;
+			opacity: 1;
+		}
+		.flex-next{
+			right: 20px;
+			opacity: 1;
+		}
+		.flex-prev, 
+		.flex-next{
+			text-shadow: 0px 0px 5px rgba(black,.7);
+		}
+	}
+	
+	.flex-direction-nav a:before{
+		line-height: 40px;
+		color: white;
+	}

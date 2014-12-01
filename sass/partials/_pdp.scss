@@ -1,0 +1,58 @@
+//  ==========================================================================
+//  PDP
+//  ==========================================================================
+	.php-bg{
+		@include background-image(linear-gradient(rgba(#aaaaaa,.6), white));
+	}
+	.pdp--product-img{
+		@extend .full-width;
+		border: 1px solid $nav-alt-grey;
+		@include box-sizing(border-box);
+	}
+	
+	.product-zoom{
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		font-size: 40px;
+		background: #bbb;
+		padding: 10px 15px;
+		color: white;
+		@include border-radius(100%);
+	}
+	
+	.pdp-insta-feed{
+		.col{
+			padding: 0px;
+		}
+	}
+	
+	.pdp--product-description{
+		padding-left: 40px;
+		.standard-p{
+			font-size: 12px;
+			line-height: 18px;
+			padding-bottom: 40px;
+		}
+		.default-cta{
+			display: inline-block;
+			position: relative;
+			bottom: inherit;
+			right: inherit;
+		}
+	}
+	
+	.pdp--brand-logo{
+		padding: 40px 0;
+	}
+	
+	.product--article-bank{
+		.standard-p{
+			padding-top: 11px;
+			strong{
+				padding: 0 0 5px 0;
+				display: inline-block;
+			}
+		}
+		img{ @extend .float-left; padding: 0 20px 0 0; margin-top: -11px; }
+	}

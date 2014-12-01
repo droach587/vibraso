@@ -1,0 +1,84 @@
+//  ==========================================================================
+//  Partners Containers
+//  ==========================================================================
+	
+	.partners-container{
+		padding: 30px 0 60px 0;
+	}
+	.category__partners-row{
+		margin: 0;
+		padding: 0;
+		width: 80%;
+		left: 50%;
+		margin: 15px 0 0 -40%;
+		&.outdoor{
+			li a { background-color: rgba(#030d33,.6); background-blend-mode: color-dodge; }
+		}
+		&.athletic{
+			li a { background-color: rgba(#d8c332,.6); background-blend-mode: multiply; padding: 10px 60px; }
+		}
+		&.lifestyle{
+			li a { background-color: rgba(#4cbe1e,.6); background-blend-mode: multiply; padding: 10px 60px; }
+		}
+		&.minimal{
+			li a { background-color: rgba(#6c2213,.6); background-blend-mode: darken; padding: 10px 100px; }
+		}
+		&.industrial{
+			li a { background-color: rgba(#ba1404,.6); background-blend-mode: overlay; padding: 10px 100px; }
+			li.span_3{
+				a{ padding: 30px 83px; }
+			}
+		}
+		li > a{
+			display: inline-block;
+			width: 100%;
+			position: relative;
+			background-color: rgba(#02072f,.6);
+			background-position:  center center;
+			background-repeat: no-repeat;
+			padding: 20px 40px;
+			@include box-shadow(inset 0px 0px 80px rba(black,.8));
+			@include background-size(cover);
+			@include transition-duration(.2s);
+			@include transition-property(all);
+			@include box-sizing(border-box);
+			&::after{
+				margin: auto;
+				position: absolute;
+				top: -100px; left: 0; bottom: 0; right: 0;
+				display: table;
+				width: 100%;
+				text-align: center;
+				height: auto;
+				content: attr(data-title);
+				z-index: 999;
+				opacity: 0;
+				font: normal 20px $din-black;
+				color: white;
+				text-transform: uppercase;
+				font-weight: normal;
+				text-shadow: 0px 0px 10px white;
+				@include filter(blur(10px));
+				@include transition-duration(.5s);
+				@include transition-property(all);
+			}
+			&:hover{
+				background-blend-mode: darken;
+				@include box-shadow(inset 0px 0px 120px rgba(black,.6));
+				img{ opacity: 0; }
+				&::after{
+					opacity: 1;
+					top: 0;
+					text-shadow: none;
+					@include filter(blur(0px));
+				}
+			}
+		}
+		
+		img{
+			@extend .float-left;
+			height: auto;
+			@include transition-duration(.2s);
+			@include transition-property(all);
+		}
+	}

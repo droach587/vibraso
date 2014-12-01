@@ -1,0 +1,27 @@
+//  ==========================================================================
+//  Standard TypeSetting
+//  ==========================================================================
+
+	.h1, .h2, .h3, .h4, .h5, .h6{
+		font-family: $din-black;
+		margin: 0px;
+		padding: 0px;
+		text-transform: uppercase;
+		color: $brand-black;
+		font-weight: normal;
+	}
+	
+	.h1	{ font-size: $default-heading; line-height: 30px; }
+	
+	.h2	{ font-size: $default-heading - 5; line-height: 26px; }
+	
+	.h3	{ font-size: $default-heading - 10; line-height: 20px; }
+	
+	.h4	{ font-size: $default-heading - 15; line-height: 18px; }
+	
+	.standard-p{
+		font-family: 	$font-family-default;
+		line-height: 	$default-line-height;
+		font-size: 		$default-font-size;
+		color: $brand-black;
+	}

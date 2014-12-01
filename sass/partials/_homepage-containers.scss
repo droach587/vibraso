@@ -1,0 +1,183 @@
+//  ==========================================================================
+//  Homepage Containers
+//  ==========================================================================
+
+	.carousel-slide{
+		position: absolute;
+		display: block;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		background-repeat: no-repeat;
+		@include background-size(0 0);
+		.sole-image{
+			position: absolute;
+			width: 55%;
+			left: 0px;
+			right: 0px;
+			margin: 0 auto 0 auto;
+			top: 50%;
+			@include transition-duration(.5s);
+			@include transition-property(all);
+			@include transform(translateY(-50%));
+		}
+	}
+	
+	.homepage__carousel{
+		.slides{
+			@extend .full-width;
+			> li{ display:none; }
+		}
+		.default-cta{ display: inline-block; margin: 5px 14px; }
+	}
+	
+	.carousel__heading{
+		font: normal 52px/52px $din-black;
+		color: white;
+		text-transform: uppercase;
+		padding: 0;
+		margin: 7% 0;
+	}
+	
+	.carousel__subheading{
+		font: normal 30px $din-black;
+		color: white;
+		text-transform: uppercase;
+	}
+	
+	.carousel__heading, 
+	.carousel__subheading{
+		text-shadow: 0px 0px 10px rgba(black, .7);
+	}
+	
+	.carousel__cta-container{
+		position: absolute;
+		width: 100%;
+		left: 0px;
+		bottom: 10%;
+		&.right-align{
+			right: 10%;
+			top: 50%;
+			bottom: initial;
+			width: 38%;
+			left: initial;
+			@include transform(translateY(-50%));
+			.carousel__heading{
+				margin: 10% 0 0 0;
+				font-size: 67px;
+				line-height: 62px;
+				letter-spacing: -1px;
+			}
+		}
+	}
+	
+//  ==========================================================================
+//  Buckets, blocks etc
+//  ==========================================================================
+
+
+	.hp--heritage{
+		background: #2b2b2b image-url('hp-vitali-brimani.jpg') center center no-repeat;
+		display: table;
+		min-height: 436px;
+		.block__primary-heading{
+			width: 403px;
+			text-align: center;
+			margin: 0 auto 0 auto;
+		}
+	}
+	
+	.hp--social{
+		.social-post{
+			font: normal 18px/22px $din-medium;
+			color: white;
+			text-shadow: 0px 0px 10px rgba(black,.9);
+			strong{ font-family: $din-black; }
+		}
+		a{
+			font: normal 18px $din-black;
+			text-transform: uppercase;
+			&:hover{ color: white; }
+		}
+	}
+	
+	a.social--link{
+		font: normal 18px $din-black;
+		text-transform: uppercase;
+		&.fb-link{ color: #78aedd; }
+		&.ig-link{ color: #bfbb96; }
+		&:hover{ color: white; }
+		&.inv:hover{
+			color: black;
+		}
+		i{
+			font-style: normal;
+			font-size: 50px;
+			vertical-align: middle;
+			display: inline-block;
+			margin: -4px 10px 0 0;
+			text-transform: none;
+		}
+	}
+	
+	.hp--events,
+	.hp--partners{
+		min-height: 354px;
+		background: black left top no-repeat;
+		@include background-size(cover);
+	}
+	
+	
+	.block{
+		border-bottom: 20px solid #fff;
+		@include box-sizing(border-box);
+		.inner-container{
+			position: absolute;
+			padding: 20px;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			margin-left: 0px;
+			@include box-sizing(border-box);
+		}
+		.vertical-block{ display: table-cell; vertical-align: middle; }
+		.bottom-block{ display: table-cell; vertical-align: bottom; }
+		&.left-article{ border-right: 10px solid #fff; }
+		&.right-article{ border-left: 10px solid #fff; }
+		&.last{ border-bottom: none; }
+	}
+	.block-container{
+		width: 100%;
+		height: 100%;
+		vertical-align: middle;
+		display: table;
+		.default-cta{ margin: 15px 10px; display: inline-block; }
+		&.right-col{ width: 70%; float: right; }
+		&.left-col{ width: 70%; float: left; }
+	}
+	
+	.block__primary-heading{
+		font: normal 80px/72px $din-black;
+		text-transform: uppercase;
+		color: white;
+		text-shadow: 0px 0px 20px rgba(black,.7);
+		margin: 10px 0 0 0;
+	}
+	
+	.block__primary-subheading{
+		color: white;
+		font: normal 16px $din-medium;
+		margin: 5px 0;
+	}
+	
+	.block__primary-eyebrow{
+		font: normal 20px $din-black;
+		color: white;
+		text-transform: uppercase;
+		text-shadow: 0px 0px 20px rgba(black,.5);
+	}
+	
+	

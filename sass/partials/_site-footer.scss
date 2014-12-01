@@ -1,0 +1,98 @@
+//  ==========================================================================
+//  Site Footer
+//  ==========================================================================
+
+	.site__footer{
+		border-top: 1px solid #bbb;
+		background: $default-page-bg;
+		@extend .full-width;
+		hr{ border-top-color: #bbb; }
+	}
+	
+	.offers__footer{
+		background: #bdbec0;
+		display: table;
+		text-align: center;
+		@extend .full-width;
+		.row{ padding: 30px 0; }
+		p{ 
+			font-size: 17px; 
+			text-transform: uppercase; 
+			font-family: $din-medium;
+		}
+		input[type="text"],
+		input[type="email"]{
+			margin-left: 10px;
+			display: inline-block;
+			padding: 8px;
+			border: 0px;
+			@include input-placeholder {
+			    opacity: .7;
+			    font-size: 14px;
+			    margin-top: 5px;
+			    vertical-align: middle;
+			}
+		}
+		button[type="submit"]{
+			padding: 8px 15px;
+			margin-left: -5px;
+			border: none;
+			background: $brand-yellow;
+			&:hover{ background: darken($nav-alt-grey,40%);  color: white; }
+		}
+	}
+	
+	.site__footer--secondary-nav{
+		@extend .full-width;
+		.col-1-of-8{ width: #{(100/8)+'%'}; }
+		.col-2-of-8{ width: #{(100/4)+'%'}; }
+		ul{
+			padding: 0;
+			margin: 0;
+			&.site__footer--follow{
+				li{
+					float: left;
+					display: inline-block;
+					width: auto;
+					white-space: nowrap;
+				}
+				li a{ 
+					text-transform: none; 
+					font-size: 40px;
+					float: none;
+					display: inline-block;
+					width: inherit;
+					padding: 0px 10px 10px 0px;
+					&:hover{ text-decoration: none !important; color: darken($nav-alt-grey,40%); }
+				}
+				i{ font-style: normal; }
+			}
+		}
+		ul li{ @extend .full-width; }
+		ul li a{
+			font: normal 11px $font-family-default;
+			text-transform: uppercase;
+			color: black;
+			padding: 10px 0;
+			@extend .full-width;
+			&:hover{ text-decoration: underline !important; }
+		}
+	}
+	
+	.site__footer--ul-title{
+		font: normal 15px $din-bold;
+		text-transform: uppercase;
+		padding: 10px 0;
+		margin: 0;
+		sup{ font-size: 10px; }
+		i{ display: none; visibility: hidden;}
+	}
+	
+	.site__footer--legal{
+		font-size: 11px;
+		color: #6a6a6a;
+		a{
+			color: #6a6a6a;
+			&:hover{ text-decoration: underline !important; }
+		}
+	}

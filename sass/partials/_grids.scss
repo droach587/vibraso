@@ -1,0 +1,137 @@
+//  ==========================================================================
+//  Grid System SCSS
+//  ==========================================================================
+
+.site-container{
+	@include center-container(1600, 200);
+	@include box-sizing(border-box);
+}
+
+.inner-container{
+	@include center-container(1600, 200);
+	@include box-sizing(border-box);
+}
+
+.row{
+	padding: $default-padding;
+	@extend .full-width;
+	@include box-sizing(border-box);
+}
+
+@mixin col {
+    float:left;
+    position: relative;
+    @include box-sizing(border-box);
+	@include background-clip(padding-box);
+}
+
+.col {
+   @include col;
+}
+
+@mixin span($num, $gutter_pc, $gutter_px, $padding, $max_columns) {
+    $one_col: (100% - ($gutter_pc * ($max_columns - 1))) / $max_columns;
+    width:($one_col * $num) + ($gutter_pc * ($num - 1));
+    border-left-width:$gutter_px;
+    padding:$padding;
+    margin-left:$gutter_pc;
+}
+
+@mixin span_first {
+    margin-left:0;
+}
+    
+@media screen and (min-width: 0px) {
+    
+    .col {
+        margin-left:0%;
+        padding: $default-padding;
+    }
+    
+    $max_columns: 12;
+    $padding: $default-padding;
+    $gutter_px: 0;
+    $gutter_pc: 0%;
+    
+    .row .col:first-child {
+        @include span_first;
+    }
+
+    .span_1 {
+        @include span(1, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_2 {
+        @include span(2, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_3 {
+        @include span(3, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_4 {
+        @include span(4, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_5 {
+        @include span(5, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_6 {
+        @include span(6, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_7 {
+        @include span(7, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_8 {
+        @include span(8, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_9 {
+        @include span(9, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_10 {
+        @include span(10, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_11 {
+        @include span(11, $gutter_pc, $gutter_px, $padding, $max_columns);
+    }
+    .span_12 {
+        @include span_first;
+        width:100%;
+    }
+}
+
+.no-pad-col{
+	padding: 0;
+}
+
+
+@media screen and (max-width: 1600px){
+	.site-container,
+	.inner-container{
+		margin: 0px;
+		left: 0px;
+		width: 100%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.span_7, .span_6, .span_5, .span_4{
+		width: 50%;
+	}
+	.span_1, .span_2, .span_3{
+		width: 25%;
+	}
+	
+	.span_8, .span_9, .span_10, .span_11{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.span_7, .span_6, .span_5, .span_4{
+		width: 100%;
+	}
+	.span_1, .span_2, .span_3{
+		width: 100%;
+	}
+	
+	.span_8, .span_9, .span_10, .span_11{
+		width: 100%;
+	}
+}
+ 

@@ -1,0 +1,81 @@
+//  ==========================================================================
+//  Globals
+//  ==========================================================================
+	
+	@mixin center-container($width, $minWidth){
+		float: left;
+		position: relative;
+		display: block;
+		width: #{$width}px;
+		min-width: #{$minWidth}px !important;
+		margin-left: -$width*.5+px;
+		left: 50%;
+	}
+	
+	@mixin font-smooth($type){
+		-webkit-font-smoothing: #{$type};
+		font-smoothing:#{$type};
+	}
+	
+	@mixin reset-center-container(){
+		margin-left: 0px;
+		width: 100%;
+		left: 0px;
+	}
+	
+	@mixin nav-columns($cols){
+		width: #{(100 / $cols)+'%'};
+	}
+	
+//  ==========================================================================
+//  Fonts
+//  ==========================================================================
+	
+	@include font-face("foundation-icons", font-files("foundation-icons.eot","foundation-icons.ttf", "foundation-icons.woff"));
+	@include font-face("din-black", font-files("din-black-webfont.eot","din-black-webfont.ttf", "din-black-webfont.woff"));
+	@include font-face("din-bold", font-files("din-bold-webfont.eot","din-bold-webfont.ttf", "din-bold-webfont.woff"));
+	@include font-face("din-light", font-files("din-light-webfont.eot","din-light-webfont.ttf", "din-light-webfont.woff"));
+	@include font-face("din-regular", font-files("din-webfont.eot","din-webfont.ttf", "din-webfont.woff"));
+	@include font-face("din-medium", font-files("din-medium-webfont.eot","din-medium-webfont.ttf", "din-medium-webfont.woff"));
+	@include font-face("Mono Social Icons Font", font-files("MonoSocialIconsFont-1.10.woff", "MonoSocialIconsFont-1.10.ttf", "MonoSocialIconsFont-1.10.svg#MonoSocialIconsFont"), "MonoSocialIconsFont-1.10.eot", normal, normal);
+	@include font-face("Font Awesome", font-files("fontawesome-webfont.eot","fontawesome-webfont.ttf", "fontawesome-webfont.eot"));
+	@include font-face("flexslider-icon", font-files("flexslider-icon.eot","flexslider-icon.ttf", "flexslider-icon.woff", "flexslider-icon.svg"));	
+	
+	//Default Font Families, Adjustments etc
+	$font-family-default: "din-regular", "Arial", "Helvetica", sans-serif !default;
+	$FontAwesome: "Font Awesome", "Arial", "Helvetica", sans-serif !default;
+	$din-bold: "din-bold", "Arial", "Helvetica", sans-serif !default;
+	$din-black: "din-black", "Arial", "Helvetica", sans-serif !default;
+	$din-medium: "din-medium", "Arial", "Helvetica", sans-serif !default;	
+	
+
+//  ==========================================================================
+//  Default Sizing 
+//  ==========================================================================
+	
+	$default-heading:			30px !default;
+	$default-font-size: 		15px !default;
+	$default-line-height:		18px !default;
+	$default-min-width:			980px !default;
+	$default-min-height:		768px !default;
+	$default-padding:			0.8% !default;	
+
+
+//  ==========================================================================
+//  Colors
+//  ==========================================================================
+
+	$default-page-bg:		#d2d3d5;
+	$brand-black:			#070707;
+	$brand-white:			#e7e7e7;
+	$brand-yellow:			#fed22b;
+	$nav-primary-grey:		#222222;
+	$nav-alt-grey:			#e6e7e9;
+	$nav-expand-grey:		#ffffff;
+	
+	//Nav
+	$nav-breadcrumb-grey:	lighten(#919191,30%);
+
+//  ==========================================================================
+//  Sprites, Image Refs
+//  ==========================================================================		

@@ -1,0 +1,42 @@
+//  ==========================================================================
+//  Various Glyphs
+//  ==========================================================================
+
+	@mixin down-arrow($px:false, $color:false){
+		width: 0; 
+		height: 0; 
+		border-left: #{$px} solid transparent;
+		border-right: #{$px} solid transparent;
+		border-top: #{$px} solid #{$color};
+		display: inline-block;
+		vertical-align: middle;
+		margin:0 0 3px 2px;
+	}
+	
+	.symbol, a.symbol:before {
+	    font-family: 'Mono Social Icons Font' !important;
+	    -webkit-text-rendering: optimizeLegibility;
+	    -moz-text-rendering: optimizeLegibility;
+	    -ms-text-rendering: optimizeLegibility;
+	    -o-text-rendering: optimizeLegibility;
+	    text-rendering: optimizeLegibility;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-font-smoothing: antialiased;
+	    -ms-font-smoothing: antialiased;
+	    -o-font-smoothing: antialiased;
+	    font-smoothing: antialiased;
+	}
+	
+	a.symbol:before {
+	    content: attr(title);
+	    margin-right: 0.3em;
+	    font-size: 130%;
+	}
+	
+	.down-arrow-sml{
+		@include down-arrow(4px, white);
+	}
+	
+	.down-arrow-med{
+		@include down-arrow(6px, #7b7c7d);
+	}
